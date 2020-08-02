@@ -1,4 +1,4 @@
-package id.zelory.cekrek
+package id.zelory.cekrek.extension
 
 import android.graphics.Bitmap
 import com.natpryce.hamkrest.assertion.assertThat

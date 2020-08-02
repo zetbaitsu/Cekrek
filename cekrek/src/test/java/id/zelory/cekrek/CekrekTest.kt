@@ -3,6 +3,10 @@ package id.zelory.cekrek
 import android.graphics.Bitmap
 import android.graphics.Color
 import android.view.View
+import id.zelory.cekrek.config.CanvasSize
+import id.zelory.cekrek.config.CekrekConfig
+import id.zelory.cekrek.config.CekrekImageFileConfig
+import id.zelory.cekrek.extension.saveToFile
 import io.mockk.*
 import org.junit.AfterClass
 import org.junit.BeforeClass
@@ -120,7 +124,7 @@ class CekrekTest {
         @BeforeClass
         fun setupClass() {
             mockkObject(Cekrek)
-            mockkStatic("id.zelory.cekrek.BitmapExtKt")
+            mockkStatic("id.zelory.cekrek.extension.BitmapExtKt")
             mockkStatic(Bitmap::class)
             every { Bitmap.createBitmap(any(), any(), any()) } returns mockk(relaxed = true)
         }

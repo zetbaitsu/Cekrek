@@ -3,6 +3,9 @@ package id.zelory.cekrek
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.view.View
+import id.zelory.cekrek.config.CekrekConfig
+import id.zelory.cekrek.config.CekrekImageFileConfig
+import id.zelory.cekrek.extension.saveToFile
 import java.io.File
 
 /**

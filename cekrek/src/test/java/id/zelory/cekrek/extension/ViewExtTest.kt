@@ -1,6 +1,11 @@
-package id.zelory.cekrek
+package id.zelory.cekrek.extension
 
 import android.view.View
+import id.zelory.cekrek.Cekrek
+import id.zelory.cekrek.config.CanvasConfig
+import id.zelory.cekrek.config.CanvasSize
+import id.zelory.cekrek.config.CekrekConfig
+import id.zelory.cekrek.config.CekrekImageFileConfig
 import io.mockk.*
 import org.junit.AfterClass
 import org.junit.BeforeClass
@@ -73,7 +78,12 @@ class ViewExtTest {
         view.cekrekToImageFile(cekrekImageFileConfig)
 
         // Then
-        verify { Cekrek.toImageFile(view, cekrekImageFileConfig) }
+        verify {
+            Cekrek.toImageFile(
+                view,
+                cekrekImageFileConfig
+            )
+        }
     }
 
     @Test
@@ -86,7 +96,12 @@ class ViewExtTest {
         view.cekrekToImageFile(destination)
 
         // Then
-        verify { Cekrek.toImageFile(view, CekrekImageFileConfig(destination)) }
+        verify {
+            Cekrek.toImageFile(
+                view,
+                CekrekImageFileConfig(destination)
+            )
+        }
     }
 
     @Test
@@ -102,9 +117,11 @@ class ViewExtTest {
 
         // Then
         verify {
-            Cekrek.toImageFile(view, CekrekImageFileConfig(destination).apply {
-                cekrekConfig.canvasConfig.width = CanvasSize.Specific(1280)
-            })
+            Cekrek.toImageFile(
+                view,
+                CekrekImageFileConfig(destination).apply {
+                    cekrekConfig.canvasConfig.width = CanvasSize.Specific(1280)
+                })
         }
     }
 
@@ -113,8 +130,18 @@ class ViewExtTest {
         @BeforeClass
         fun setupClass() {
             mockkObject(Cekrek)
-            every { Cekrek.toBitmap(any(), any<CekrekConfig>()) } returns mockk()
-            every { Cekrek.toImageFile(any(), any<CekrekImageFileConfig>()) } returns mockk()
+            every {
+                Cekrek.toBitmap(
+                    any(),
+                    any<CekrekConfig>()
+                )
+            } returns mockk()
+            every {
+                Cekrek.toImageFile(
+                    any(),
+                    any<CekrekImageFileConfig>()
+                )
+            } returns mockk()
         }
 
         @JvmStatic

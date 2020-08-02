@@ -1,4 +1,4 @@
-package id.zelory.cekrek
+package id.zelory.cekrek.config
 
 import android.view.View
 

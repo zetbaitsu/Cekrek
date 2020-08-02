@@ -1,7 +1,10 @@
-package id.zelory.cekrek
+package id.zelory.cekrek.extension
 
 import android.graphics.Bitmap
 import android.view.View
+import id.zelory.cekrek.Cekrek
+import id.zelory.cekrek.config.CekrekConfig
+import id.zelory.cekrek.config.CekrekImageFileConfig
 import java.io.File
 
 /**

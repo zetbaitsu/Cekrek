@@ -1,0 +1,3 @@
+include ':cekrek'
+include ':app'
+rootProject.name = "Cekrek"

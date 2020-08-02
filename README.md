@@ -2,6 +2,7 @@ Cekrek
 ======
 [![Build Status](https://travis-ci.org/zetbaitsu/Cekrek.svg?branch=master)](https://travis-ci.org/zetbaitsu/Cekrek)
 [![codecov](https://codecov.io/gh/zetbaitsu/Cekrek/branch/master/graph/badge.svg)](https://codecov.io/gh/zetbaitsu/Cekrek)
+[![Code Climate](https://codeclimate.com/github/zetbaitsu/Cekrek/badges/gpa.svg)](https://codeclimate.com/github/zetbaitsu/Cekrek)
 
 Cekrek is an android library that allows you to export any view to bitmap or image file in a convenient way.
 

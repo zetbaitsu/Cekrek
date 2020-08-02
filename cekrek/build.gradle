@@ -2,6 +2,43 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'jacoco-android'
+apply plugin: 'com.github.dcendents.android-maven'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.4.1'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.6'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'cekrek'
+
+    publishedGroupId = 'id.zelory'
+    libraryName = 'Cekrek'
+    artifact = 'cekrek'
+
+    libraryDescription = 'Export any view to bitmap or image file'
+
+    siteUrl = 'https://github.com/zetbaitsu/Cekrek'
+    gitUrl = 'https://github.com/zetbaitsu/Cekrek.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'zetbaitsu'
+    developerName = 'Zetra'
+    developerEmail = 'zetra@mail.ugm.ac.id'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
 
 android {
     compileSdkVersion 29
@@ -29,6 +66,9 @@ android {
     }
 }
 
+apply from: 'https://raw.githubusercontent.com/zetbaitsu/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/zetbaitsu/JCenter/master/bintrayv1.gradle'
+
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
@@ -36,4 +76,12 @@ dependencies {
     testImplementation 'junit:junit:4.13'
     testImplementation 'io.mockk:mockk:1.9.3'
     testImplementation 'com.natpryce:hamkrest:1.7.0.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+tasks.withType(Javadoc).all {
+    enabled = false
 }

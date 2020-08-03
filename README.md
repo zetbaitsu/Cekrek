@@ -86,7 +86,7 @@ val imageFile = view.cekrekToImageFile(destination) {
 ```
 #### Export to image file with config variable
 ```kotlin
-val config = CekrekImageFileConfig().apply {
+val config = CekrekImageFileConfig(destination).apply {
     cekrekConfig.canvasConfig.width = CanvasSize.Specific(1280)
     format = Bitmap.CompressFormat.PNG
 }

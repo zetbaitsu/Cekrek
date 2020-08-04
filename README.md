@@ -1,5 +1,6 @@
 Cekrek
 ======
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Cekrek-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/8141)
 [![Build Status](https://travis-ci.org/zetbaitsu/Cekrek.svg?branch=master)](https://travis-ci.org/zetbaitsu/Cekrek)
 [![codecov](https://codecov.io/gh/zetbaitsu/Cekrek/branch/master/graph/badge.svg)](https://codecov.io/gh/zetbaitsu/Cekrek)
 [![Code Climate](https://codeclimate.com/github/zetbaitsu/Cekrek/badges/gpa.svg)](https://codeclimate.com/github/zetbaitsu/Cekrek)
